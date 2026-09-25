@@ -1,6 +1,8 @@
 extends Control
 @onready var settings_menu: ColorRect = $SettingsMenu
 
+static var win = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,7 +23,7 @@ func _on_settings_pressed() -> void:
 
 func _on_close_pressed() -> void:
 	settings_menu.visible = false
-
+	
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
